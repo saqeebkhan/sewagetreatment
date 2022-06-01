@@ -1,14 +1,12 @@
-package com.example.demo.model;
+package com.example.demo.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity
+@Table(name = "worker")
 public class Worker {
 
     @Id
@@ -16,6 +14,8 @@ public class Worker {
     private Long id;
     private String name;
     private String phoneNumber;
+    private String aadharNumber;
     private String state;
     private String city;
+    private String image;
 }
